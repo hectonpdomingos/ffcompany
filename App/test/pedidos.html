@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+<!--
+Software demonstrativo criado por Hecton P.Domignos e Elena Lezhneva para o trabalho do
+Curso de Anlálise e desenvolvimento de sistemas - Unopar. 2017.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Controle de Pedido- Flor de Liz</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" href="images/favicon.png">
+
+
+
+
+</head>
+
+<body>
+
+    <center>
+        <h3>Controle de Pedidos</h3>
+    </center>
+
+
+    <form name="codexworld_frm" action="receberPedidos.php" method="post">
+        <div class="field_wrapper">
+            <div>
+                <input type="text" name="field_name[1][]" value="" />
+                <input type="text" name="field_name[1][]" value="" />
+                <input type="text" name="field_name[1][]" value="" />
+                <a href="javascript:void(0);" class="add_button" title="Add field">Add Fields</a>
+            </div>
+        </div>
+        <input type="submit" name="submit" value="SUBMIT" />
+    </form>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var maxField = 10; //Input fields increment limitation
+            var addButton = $('.add_button'); //Add button selector
+            var wrapper = $('.field_wrapper'); //Input field wrapper
+            var fieldHTML = {
+                row: function (f) {
+                    return '<div><input type="text" name="field_name[' + f +
+                        '][]" value=""/><input type="text" name="field_name[' + f +
+                        '][]" value=""/><input type="text" name="field_name[' + f +
+                        '][]" value=""/><a href="javascript:void(0);" class="remove_button" title="Remove field">Remove Field</a></div>';
+                }
+            };
+
+            var x = 1; //Initial field counter is 1
+            $(addButton).click(function () { //Once add button is clicked
+                if (x < maxField) { //Check maximum number of input fields
+                    x++; //Increment field counter
+                    $(wrapper).append(fieldHTML.row(x)); // Add field html
+                }
+            });
+            $(wrapper).on('click', '.remove_button', function (e) { //Once remove button is clicked
+                e.preventDefault();
+                $(this).parent('div').remove(); //Remove field html
+                x--; //Decrement field counter
+            });
+        });
+    </script>

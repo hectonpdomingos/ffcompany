@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+     
+    <meta name="Your freight forwarder" content="">
+    <link rel="icon" href="favicon.png">
+
+    <title>Your freight forwarder</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">    
+    <link href="css/cadastro.css" rel="stylesheet">
+    <link href="css/style-boot.css" rel="stylesheet">
+</head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" >Your freight forwarder company name</a>
+        </div>
+          
+          
+        <div id="navbar" class="navbar-collapse collapse">
+          <form action="validacao.php" method="post" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input name="email" id="txUsuario" maxlength="25" type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input name="passwd" id="txSenha" type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" value="Entrar" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 style="color:#426B97; !Important;font-family: 'Oxygen Mono', monospace;">Your freight forwarder</h1>
+        <p style="color:#426B97; font-family: 'Oxygen Mono', monospace;">Buy and we send to you!</p>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cadastro">
+ Sign Up &raquo;
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="cadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4>Fill the form</h4>
+      
+      </div>
+      
+      
+      
+      <div class="modal-body">
+      
+
+<div class="container">
+
+<form class="form-signin"  name="cadastre" method="post" action="efetuado.php">
+     
+     <!--<h4 class="modal-title" id="myModalLabel">Sign Up</h4>-->
+	<label for="inputName" class="sr-only">Name</label>
+        <input type="name" name="name" id="inputName" class="form-control" placeholder="Your name" required autofocus>
+        <label for="inputName" class="sr-only">Last name</label>
+        <input type="name" id="inputLogin" name="surname" class="form-control" placeholder="Surname and Last name" required autofocus>
+        <label for="inputEmail" class="sr-only">E-mail address</label>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="passwd" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"  value="Cadastrar">Sign Up</button>
+      </form>
+ 
+
+</div> <!-- /container -->
+
+
+<!--FIM DO CONTEUDO-->
+
+       
+       
+       </div>
+	  
+      <center>
+	  
+	  <footer>
+        All information needs to be valid.
+      </footer>
+	  
+	  </center>
+    </div> 
+    
+  </body>
+</html>
